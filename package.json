@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build-demo": "webpack --entry ./src/goban/main.js -o ./goban --output-filename bundle.js --progress --mode production",
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json"
   },
@@ -19,5 +20,8 @@
     "tslib": "^2.4.0",
     "typescript": "^4.6.4",
     "vite": "^3.2.0"
+  },
+  "dependencies": {
+    "svelte-canvas": "^0.7.1"
   }
 }
