@@ -1,9 +1,11 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import board from '../assets/board.png';
+    import Grid from './Grid.svelte';
 	
 	const size = 600;
 	let canvas;
+  
 	onMount(async () => {
 		const ctx = canvas.getContext('2d');
 
@@ -12,18 +14,22 @@
 		image.onload = () => {
 			ctx.fillStyle = ctx.createPattern(image, 'repeat'); 
 			ctx.fillRect(0, 0, canvas.width, canvas.height)
+
+            // ctx.beginPath();
+            // ctx.moveTo(10, 20); // line will start here
+            // ctx.lineTo(150, 100); // line ends here
+            // ctx.stroke();
+
+            // ctx.beginPath();
+            // ctx.moveTo(10, 40); // line will start here
+            // ctx.lineTo(150, 120); // line ends here
+            // ctx.stroke(); 
             
 		};
 
-        ctx.beginPath();
-        ctx.moveTo(10, 20); // line will start here
-        ctx.lineTo(150, 100); // line ends here
-        ctx.stroke();
+   
 
-        ctx.beginPath();
-        ctx.moveTo(10, 40); // line will start here
-        ctx.lineTo(150, 120); // line ends here
-        ctx.stroke(); 
+       
 	})
     
 </script>
@@ -34,7 +40,10 @@
        
         <canvas bind:this={canvas}
         width={size} height={size}
-        style="width: {size}px; height: {size}px" />
+        style="width: {size}px; height: {size}px" >
+    
+      </canvas>
+      <Grid></Grid>
      
     </div>
        
