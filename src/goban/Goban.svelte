@@ -15,15 +15,7 @@
 			ctx.fillStyle = ctx.createPattern(image, 'repeat'); 
 			ctx.fillRect(0, 0, canvas.width, canvas.height)
 
-            // ctx.beginPath();
-            // ctx.moveTo(10, 20); // line will start here
-            // ctx.lineTo(150, 100); // line ends here
-            // ctx.stroke();
-
-            // ctx.beginPath();
-            // ctx.moveTo(10, 40); // line will start here
-            // ctx.lineTo(150, 120); // line ends here
-            // ctx.stroke(); 
+           
             
 		};
 
