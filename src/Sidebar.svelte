@@ -1,7 +1,5 @@
 <script lang="ts">
     import { onMount } from 'svelte';
-	const size = 600;
-	let canvas;
   
 	onMount(async () => {
 	})
@@ -10,9 +8,15 @@
 
 
 <main>
-    <div id="sidebar">     
+    <div id="sidebar" width=200 height=600>  
+		Placeholder   
     </div>
        
 
 </main>
-<style></style>
+<style>
+	#sidebar {
+		background-color: aqua;
+	}
+	
+</style>

@@ -1,25 +1,12 @@
 <script lang="ts">
     import { onMount } from 'svelte';
-    import board from '../assets/board.png';
     import Grid from './Grid.svelte';
+    import SvgGoban from './SvgGoban.svelte';
 	
-	const size = 600;
-	let canvas;
+
   
 	onMount(async () => {
-		const ctx = canvas.getContext('2d');
 
-		const image = new Image();
-		image.src = board;
-		image.onload = () => {
-			ctx.fillStyle = ctx.createPattern(image, 'repeat'); 
-			ctx.fillRect(0, 0, canvas.width, canvas.height)
-
-           
-            
-		};
-
-   
 
        
 	})
@@ -30,12 +17,8 @@
 <main>
     <div class="shudan-goban">
        
-        <canvas bind:this={canvas}
-        width={size} height={size}
-        style="width: {size}px; height: {size}px" >
-    
-      </canvas>
-      <Grid></Grid>
+        <SvgGoban></SvgGoban>
+  
      
     </div>
        
