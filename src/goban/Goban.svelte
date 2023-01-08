@@ -18,8 +18,7 @@
     <div class="shudan-goban">
        
         <SvgGoban></SvgGoban>
-  
-     
+
     </div>
        
 
