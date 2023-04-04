@@ -1,5 +1,7 @@
 # Instructions
 
+Requires the Rust toolchain:
+
 yarn tauri dev
 
 # Svelte + TS + Vite
